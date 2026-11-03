@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Production build
+dist/
+build/
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+
+# Keys and credentials
+*.pem
+*.key
+.aws/
+
+# Kubernetes / Helm local secrets
+*-secret.local.yaml
+
+# Python / ML artifacts
+__pycache__/
+*.pyc
+.venv/
+*.ckpt
+
+# Coverage / test output
+coverage/
+EOF
