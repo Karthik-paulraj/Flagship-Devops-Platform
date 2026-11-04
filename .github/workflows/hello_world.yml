@@ -1,0 +1,13 @@
+name : hello_world
+
+on:
+  workflow_dispatch
+
+jobs:
+  
+  print_hello_world:
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello
+        run: echo "Welcome to github actions from ubuntu-latest"
