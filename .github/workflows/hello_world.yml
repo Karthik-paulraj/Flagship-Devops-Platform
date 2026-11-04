@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: buildind_docker
-        run: echo "building docker image"
+        run: 
+          echo "building docker image"
+          echo "Your secret name is ${{secret.MY_SECRET_NAME}} "
 
   Test:
 
@@ -28,7 +30,9 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: deploying_product
-        run: echo "Deploying Artifact to EC2 instance"
+        run: 
+          echo "Deploying Artifact to EC2 instance"
+          echo "Your secret name is ${{vars.NOT_MY_SECRET_NAME}}"
   
-  
+
 
