@@ -3,7 +3,7 @@ name: ci
 on:
   pull_request:
   push:
-    branches: [main,ci/github-actions]
+    branches: [main]
 
 permissions:
   contents: read
@@ -27,6 +27,7 @@ jobs:
       - name: Install dependencies
         working-directory: ${{ matrix.service }}
         run: npm ci
+        
 
       - name: Lint
         working-directory: ${{ matrix.service }}
