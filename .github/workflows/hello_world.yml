@@ -12,7 +12,8 @@ jobs:
       - name: buildind_docker
         run: 
           echo "building docker image"
-          echo "Your secret name is ${{secret.MY_SECRET_NAME}} "
+          echo "Your secret name is ${{secrets.MY_SECRET_NAME}} "
+          cat .gitignore
 
   Test:
 
