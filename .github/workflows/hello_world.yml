@@ -13,10 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: buildind_docker
-        run: 
-          echo "building docker image"
-          echo "Your secret name is ${{secrets.MY_SECRET_NAME}} "
-          cat tester.html
+        run: cat tester.html
 
   Test:
 
