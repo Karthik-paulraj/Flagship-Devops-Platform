@@ -16,7 +16,7 @@ jobs:
         run: 
           echo "building docker image"
           echo "Your secret name is ${{secrets.MY_SECRET_NAME}} "
-          cat .gitignore
+          cat tester.html
 
   Test:
 
