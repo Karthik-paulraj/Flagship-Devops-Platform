@@ -5,9 +5,30 @@ on:
 
 jobs:
   
-  print_hello_world:
+  Build:
 
     runs-on: ubuntu-latest
     steps:
-      - name: Hello
-        run: echo "Welcome to github actions from ubuntu-latest"
+      - name: buildind_docker
+        run: echo "building docker image"
+
+  Test:
+
+    needs: Build
+
+    runs-on: windows-latest
+    steps:
+      - name: testing_process
+        run: echo "Running tests on code"
+      
+  Deploy:
+
+    needs: Test
+
+    runs-on: macos-latest
+    steps:
+      - name: deploying_product
+        run: echo "Deploying Artifact to EC2 instance"
+  
+  
+
